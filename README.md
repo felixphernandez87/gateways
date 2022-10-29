@@ -1,3 +1,8 @@
 # gateways
 
-aqui algo
+Install Node.js
+
+Database: MongoBD
+
+Run project: npm run dev
+
