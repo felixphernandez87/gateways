@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "5a2cd861-3143-45de-83e7-3b245501c0b7",
+		"name": "gateways",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get-all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/635be25ac1019465291b2833",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"635be25ac1019465291b2833"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Calimete",
+							"type": "default"
+						},
+						{
+							"key": "ip",
+							"value": "127.2.2.58",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-gateway",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Amarillas 1",
+							"type": "default"
+						},
+						{
+							"key": "ip",
+							"value": "187.25.87.87",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/635be25ac1019465291b2833",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"635be25ac1019465291b2833"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-gateway",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/635be25ac1019465291b2833",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"635be25ac1019465291b2833"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-device",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vendor",
+							"value": "epson",
+							"type": "default"
+						},
+						{
+							"key": "status",
+							"value": "offline",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/adddevice/635c107d3232fc53cc00cf83",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"adddevice",
+						"635c107d3232fc53cc00cf83"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove-device",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "gatewayId",
+							"value": "635c107d3232fc53cc00cf83",
+							"type": "default"
+						},
+						{
+							"key": "deviceUid",
+							"value": "1666979186928",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/removedevice",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"removedevice"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:3003/api/gateways",
+			"type": "default"
+		}
+	]
+}
