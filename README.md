@@ -13,3 +13,7 @@ POST `/api/auth/login` with JSON body `{ "username": "admin", "password": "passw
 
 The default credentials can be changed by setting the `ADMIN_USER` and
 `ADMIN_PASS` environment variables (see `.env.example`).
+
+## Product Listing
+
+GET `/api/products` returns all stored products.
