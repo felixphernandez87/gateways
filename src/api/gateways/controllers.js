@@ -1,5 +1,8 @@
 import { service } from "./service.js";
 
+// Controladores HTTP para la gestión de gateways
+
+// Obtener un gateway por su id
 const getOne = async (req, res) => {
   try {
     const id = req.params.id;
@@ -9,6 +12,7 @@ const getOne = async (req, res) => {
   }
 };
 
+// Listar todos los gateways
 const getAll = async (req, res) => {
   try {
     res.json(await service.readall());
@@ -17,6 +21,7 @@ const getAll = async (req, res) => {
   }
 };
 
+// Crear un nuevo gateway
 const createGateway = async (req, res) => {
   try {
     const data = req.body;
@@ -27,6 +32,7 @@ const createGateway = async (req, res) => {
   }
 };
 
+// Actualizar un gateway existente
 const updateGateway = async (req, res) => {
   try {
     const id = req.params.id;
@@ -38,6 +44,7 @@ const updateGateway = async (req, res) => {
   }
 };
 
+// Eliminar un gateway por id
 const deleteGateway = async (req, res) => {
   try {
     const id = req.params.id;
@@ -48,6 +55,7 @@ const deleteGateway = async (req, res) => {
   }
 };
 
+// Añadir un dispositivo a un gateway
 const addDevice = async (req, res) => {
   try {
     const gatewayId = req.params.id;
@@ -59,6 +67,7 @@ const addDevice = async (req, res) => {
   }
 };
 
+// Eliminar un dispositivo de un gateway
 const removeDevice = async (req, res) => {
   try {
     const { gatewayId, deviceUid } = req.body;
