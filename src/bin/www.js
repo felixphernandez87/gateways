@@ -2,6 +2,8 @@ import http from 'http';
 //const crypto = require('crypto');
 import app from '../../app.js';
 
+// Script para iniciar el servidor HTTP
+
 process.env.NODE_ENV = 'development';
 //process.env.TOKEN_SECRET = crypto.randomBytes(64).toString('hex');
 process.env.TOKEN_SECRET =
