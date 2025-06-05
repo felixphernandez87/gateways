@@ -18,6 +18,10 @@ The default credentials can be changed by setting the `ADMIN_USER` and
 
 GET `/api/products` returns all stored products.
 
+## Reports
+
+GET `/api/reports/gateways` returns the total number of gateways and the total number of associated devices.
+
 ## User CRUD
 
 The API exposes endpoints under `/api/users` to manage user records:
