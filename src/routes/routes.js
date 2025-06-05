@@ -5,6 +5,7 @@ import { gatewayRoutes } from "../api/gateways/routes.js";
 import { authRoutes } from "../api/auth/routes.js";
 import { productRoutes } from "../api/products/routes.js";
 import { userRoutes } from "../api/users/routes.js";
+import { reportRoutes } from "../api/reports/routes.js";
 
 // Objeto Router principal que agrupa todas las rutas
 const routes = Router();
@@ -16,6 +17,7 @@ routes.use("/api/auth", authRoutes);
 // Endpoints de productos
 routes.use("/api/products", productRoutes);
 routes.use("/api/users", userRoutes);
+routes.use("/api/reports", reportRoutes);
 routes.all("*", (req, res) => {
   res.sendStatus("404");
 });
